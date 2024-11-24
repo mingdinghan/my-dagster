@@ -6,7 +6,7 @@ from dagster import AssetExecutionContext
 from dagster_dbt import DbtCliResource, dbt_assets
 
 # configure dbt project resource
-dbt_project_dir = Path(__file__).joinpath("..", "..", "..", "dbt", "warehouse").resolve()
+dbt_project_dir = Path(__file__).joinpath("..", "..", "..", "..", "dbt", "warehouse").resolve()
 dbt_warehouse_resource = DbtCliResource(project_dir=os.fspath(dbt_project_dir))
 
 # generate manifest
